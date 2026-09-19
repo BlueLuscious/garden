@@ -1,0 +1,58 @@
+# Garden Architecture Book
+
+Status: **Proposed ecosystem authority**
+
+Garden is an ecosystem of independent software projects that share an interoperability philosophy
+without requiring one another. This Architecture Book records project identity, ecosystem
+relationships, and cross-project dependency direction. It is not an API reference and does not
+replace the canonical documentation owned by each project.
+
+## Projects
+
+| Project | Role | Current architectural status |
+| --- | --- | --- |
+| [Lilium](products/lilium/index.md) | Frontend framework | Active project with evolving architecture. |
+| [Protea](products/protea/index.md) | UI component library | Active product direction with evolving architecture. |
+| [Aster](products/aster/index.md) | Portable icon platform | Active project with implemented Core, Icons, SVG, Import, and CLI packages. |
+| [Flora](products/flora/index.md) | Headless multi-ecosystem CLI platform | Accepted product direction; implementation and plugin ABI remain future work. |
+
+The [Garden ecosystem](ecosystem.md) defines the principles shared by these projects.
+
+## Authority boundary
+
+This book may state:
+
+- why a Garden project exists;
+- what broad responsibility it owns;
+- which dependencies and integrations are allowed;
+- which project owns an adapter or plugin;
+- which cross-project decisions are accepted, provisional, or deferred.
+
+This book must not duplicate package contracts, installation instructions, runtime workflows,
+diagnostic tables, release procedures, or source-level implementation details. Those belong to
+the relevant project and package documentation. Within this repository, the
+[Aster package documentation](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages) remains authoritative for implemented Aster
+behaviour.
+
+## Status language
+
+| Status | Meaning |
+| --- | --- |
+| Accepted | The identity or boundary is an active architectural constraint. |
+| Proposed | The direction is useful but still requires implementation or consumer evidence. |
+| Provisional | A likely name or package boundary that may change without compatibility impact. |
+| Deferred | Work intentionally postponed until an explicit trigger exists. |
+
+Project identity can be accepted while its package layout, ABI, or implementation remains
+proposed. Flora currently uses this distinction.
+
+## Botanical naming authority
+
+The [Garden Botanical Registry](registry/index.md) is the canonical cross-project authority for
+Garden's botanical identity system. Its genus registry owns product assignments, deliberate
+exceptions, reserved names, and candidates. Each product owns its species assignments through the
+registry linked from its product documentation.
+
+This Architecture Book may explain how a botanical identity affects an architectural boundary,
+but it must not duplicate botanical registries. Conversely, those registries do not own package
+APIs, implementation details, visual specifications, or runtime behaviour.
