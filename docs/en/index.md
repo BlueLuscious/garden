@@ -1,11 +1,15 @@
 # Garden Architecture Book
 
-Status: **Proposed ecosystem authority**
+Status: **Canonical ecosystem authority; individual decisions retain their stated status**
 
 Garden is an ecosystem of independent software projects that share an interoperability philosophy
 without requiring one another. This Architecture Book records project identity, ecosystem
 relationships, and cross-project dependency direction. It is not an API reference and does not
 replace the canonical documentation owned by each project.
+
+The [shared project rules](project-rules.md) own accepted engineering and contribution policy,
+including language-specific profiles, shared CLI presentation and the procedure for product exceptions.
+Policy acceptance is distinct from product adoption and automated enforcement.
 
 ## Projects
 
@@ -27,6 +31,10 @@ This book may state:
 - which dependencies and integrations are allowed;
 - which project owns an adapter or plugin;
 - which cross-project decisions are accepted, provisional, or deferred.
+
+Shared engineering and contribution requirements belong to the [project rules](project-rules.md).
+Product repositories reference that authority and retain their compatible additions and approved
+exceptions at the owning product; reciprocal links preserve each subject's owner.
 
 This book must not duplicate package contracts, installation instructions, runtime workflows,
 diagnostic tables, release procedures, or source-level implementation details. Those belong to
