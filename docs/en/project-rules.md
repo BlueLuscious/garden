@@ -232,23 +232,33 @@ across owned content as described below.
 
 Descriptive JSDoc is mandatory for production APIs, contracts, types, classes, functions,
 constructors, methods, accessors, properties, module-scoped constants and domain authorities,
-whether public, internal or private. Class members retain this requirement regardless of visibility.
+whether public, internal or private, subject to the implementation exclusions below. Class members
+retain this requirement regardless of visibility.
 
 - Every required descriptive block includes `@description`.
-- Include `@param` for every function, constructor and method parameter.
-- Include `@returns` for every function, accessor and method, including those returning void.
-- Include `@typeParam` for every generic parameter.
-- Use `@remarks` for useful non-obvious invariants, ownership, lifecycle or design context.
+- Include `@param` for every parameter of a documented function, constructor or method.
+- Include `@returns` for every documented function, accessor and method, including those returning void.
+- Include `@typeParam` for every generic parameter of a documented declaration.
+- Use `@remarks` for important non-obvious details, such as internal processes, failure behaviour,
+  invariants, ownership, lifecycle or design context.
 
 Describe stable behaviour, responsibilities and relationships. Link stable symbols or canonical
 documentation where useful; exclude contributor-local delivery chronology and records.
 
 ### JSDoc exceptions and ordinary comments
 
-Imports, pure re-export barrels and tests are exempt from descriptive JSDoc requirements. Local
-variables/constants inside functions, methods, callbacks or blocks do not need trivial descriptive
-blocks merely because they are bindings. This does not exempt functions, contracts or domain
-authorities declared locally. Put useful non-obvious context in the owning JSDoc.
+Imports, pure re-export barrels and tests are exempt from descriptive JSDoc requirements.
+
+Document each function, constructor, method and accessor as a whole. Its local variables/constants,
+helper functions (arrow or function declarations), callbacks, returned closures and nested blocks
+are covered by the owning declaration's JSDoc. Do not put separate descriptive JSDoc blocks inside
+implementation bodies. Put important internal processes, failure behaviour and other non-obvious
+details in the owning declaration's `@remarks`.
+
+Inline callbacks also do not receive separate descriptive blocks when supplied to module-scope
+operations. Independently declared module-level functions/constants and class members retain their
+own descriptive blocks; using a documented function as a callback does not change that requirement.
+Do not extract or rename local implementation merely to add or avoid descriptive blocks.
 
 Retain local JSDoc needed for JavaScript type information, such as `@type`; a type annotation alone
 does not require `@description`. A separately accepted testing-documentation policy may define
