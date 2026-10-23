@@ -11,6 +11,7 @@ owned by each product repository.
 
 - [Ecosystem architecture](docs/en/ecosystem.md)
 - [Shared project rules](docs/en/project-rules.md)
+- [Repository automation](docs/en/automation.md)
 - [Botanical Registry](docs/en/registry/index.md)
 - [Aster](docs/en/products/aster/index.md)
 - [Flora](docs/en/products/flora/index.md)
