@@ -233,7 +233,7 @@ across owned content as described below.
 Descriptive JSDoc is mandatory for production APIs, contracts, types, classes, functions,
 constructors, methods, accessors, properties, module-scoped constants and domain authorities,
 whether public, internal or private, subject to the implementation exclusions below. Class members
-retain this requirement regardless of visibility.
+retain their own descriptive JSDoc, including private members.
 
 - Every required descriptive block includes `@description`.
 - Include `@param` for every parameter of a documented function, constructor or method.
@@ -249,16 +249,22 @@ documentation where useful; exclude contributor-local delivery chronology and re
 
 Imports, pure re-export barrels and tests are exempt from descriptive JSDoc requirements.
 
-Document each function, constructor, method and accessor as a whole. Its local variables/constants,
-helper functions (arrow or function declarations), callbacks, returned closures and nested blocks
-are covered by the owning declaration's JSDoc. Do not put separate descriptive JSDoc blocks inside
-implementation bodies. Put important internal processes, failure behaviour and other non-obvious
-details in the owning declaration's `@remarks`.
+Document each operation as a whole. Local variables/constants, helper functions (arrow or function
+declarations), callbacks and closures that only implement that operation are covered by its owning
+declaration's JSDoc, without separate descriptive blocks. Put important internal processes, failure
+behaviour and other non-obvious details in the owner's `@remarks`. This also covers implementation
+callbacks supplied to module-scope operations.
 
-Inline callbacks also do not receive separate descriptive blocks when supplied to module-scope
-operations. Independently declared module-level functions/constants and class members retain their
-own descriptive blocks; using a documented function as a callback does not change that requirement.
-Do not extract or rename local implementation merely to add or avoid descriptive blocks.
+Distinguish implementation details from consumable surfaces by responsibility and consumers, not
+syntactic location. An object or function constructed inside an implementation may expose a surface
+consumed outside that operation. Its callable contract, properties and methods require documentation
+available to those consumers through the canonical contract or, where appropriate, the exposed
+members themselves. This includes returned or exported objects and functions, even when their types
+are inferred. Do not automatically duplicate documentation already supplied by the canonical contract.
+
+Independently declared module-level functions/constants retain their own descriptive blocks;
+using a documented function as a callback does not change that requirement. Do not extract functions,
+create artificial contracts or rename implementation merely to add or avoid descriptive blocks.
 
 Retain local JSDoc needed for JavaScript type information, such as `@type`; a type annotation alone
 does not require `@description`. A separately accepted testing-documentation policy may define
