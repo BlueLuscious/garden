@@ -17,7 +17,7 @@ Policy acceptance is distinct from product adoption and automated enforcement.
 | --- | --- | --- |
 | [Lilium](products/lilium/index.md) | Frontend framework | Active project with evolving architecture. |
 | [Protea](products/protea/index.md) | UI component library | Active product direction with evolving architecture. |
-| [Aster](products/aster/index.md) | Portable icon platform | Active project with implemented Core, Icons, SVG, Import, and CLI packages. |
+| [Aster](products/aster/index.md) | Portable icon platform | Active project with published Core, Icons, SVG and CLI packages, plus private Import. |
 | [Flora](products/flora/index.md) | Headless multi-ecosystem CLI platform | Accepted product direction; implementation and plugin ABI remain future work. |
 
 The [Garden ecosystem](ecosystem.md) defines the principles shared by these projects.
@@ -38,9 +38,9 @@ exceptions at the owning product; reciprocal links preserve each subject's owner
 
 This book must not duplicate package contracts, installation instructions, runtime workflows,
 diagnostic tables, release procedures, or source-level implementation details. Those belong to
-the relevant project and package documentation. Within this repository, the
-[Aster package documentation](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages) remains authoritative for implemented Aster
-behaviour.
+the relevant project and package documentation. Aster's
+[package documentation](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages)
+remains authoritative for implemented Aster behaviour.
 
 ## Status language
 

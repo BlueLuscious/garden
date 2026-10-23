@@ -1,6 +1,6 @@
 # Garden Ecosystem
 
-Status: **Proposed ecosystem authority**
+Status: **Canonical ecosystem authority; individual decisions retain their stated status**
 
 Garden is a family of focused software projects for building frontend products. Its identity comes
 from interoperability, consistent architectural values, and deliberate integration boundaries,
@@ -20,6 +20,9 @@ Garden aims to provide a coherent set of independently useful tools while preser
 
 Botanical names provide a shared identity, but each name should reinforce a real product role
 rather than justify creating another repository.
+
+The [shared project rules](project-rules.md) own engineering and contribution conventions.
+This document owns product relationships; product documentation owns implemented contracts.
 
 ## Principles
 
@@ -63,7 +66,8 @@ foundations are internal architectural layers, not a restriction of the product 
 
 ## Dependency direction
 
-The current ecosystem rules are:
+The accepted dependency boundaries are shown below. Optional adapters and Flora integrations
+describe permitted compositions, not evidence of implemented or published integrations.
 
 ```text
 Lilium  -X-> Protea
@@ -71,10 +75,10 @@ Lilium  -X-> Aster
 Aster   -X-> Protea
 Aster   -X-> Lilium core runtime
 
-Protea   ----> optional Aster integration
-Protea   ----> optional Lilium adapter
-Aster   ----> optional Lilium adapter
-Projects ----> optional Flora plugin adapters
+Protea                ----> optional Aster public capability
+Protea Lilium adapter ----> Protea public contracts + Lilium public contracts
+Aster Lilium adapter  ----> Aster public contracts + Lilium public contracts
+Project Flora plugin  ----> project public commands + Flora public contracts
 ```
 
 An adapter depends on public contracts from the products it connects. The foundational product
@@ -94,7 +98,8 @@ understand. Generic host contracts remain with the host project.
 
 ## Supported compositions
 
-Garden should permit, among others:
+Garden's architecture permits, among others, the following compositions. This is an ownership and
+dependency model, not an installation or support matrix:
 
 ```text
 Lilium
@@ -113,7 +118,8 @@ No composition is the mandatory definition of Garden.
 ## Repository and versioning model
 
 Major products belong in separate repositories and may use internal monorepos for packages that
-share one product boundary:
+share one product boundary. The layout below models ownership; it does not establish every
+repository or integration as implemented:
 
 ```text
 BlueLuscious/
@@ -140,33 +146,17 @@ The ecosystem must not grow merely to appear comprehensive.
 
 ## Botanical naming model
 
-Garden uses botanical nomenclature as an architectural identity system, not merely as a visual
-theme.
+Botanical identities connect each product's role to Garden without determining its package graph
+or implementation. The [Garden Botanical Registry](registry/index.md) owns the naming model,
+statuses, taxonomic integrity and product species authorities. The
+[Garden Genus Registry](registry/genera.md) owns product assignments, reservations and candidates,
+including [Flora's accepted exception](registry/genera.md#flora).
 
-```text
-Garden product or project       ----> botanical genus
-Named internal product identity ----> species of that genus
-```
-
-A genus normally identifies a major Garden product when its botanical meaning reinforces the
-product role. Species belonging to that genus form a reserved naming space for meaningful and
-durable identities within the product.
-
-Species names are not mandatory for every package, class, component, or implementation detail.
-Each product decides which internal concept maps naturally to species and assigns a species only
-when that concept has enough stability and semantic value to benefit from a botanical identity.
-Aster provides the first explicit application: official icon collections may use species of the
-genus *Aster*.
-
-The [Garden Botanical Registry](registry/index.md) is authoritative for botanical names,
-taxonomic status, reservations, candidates, species assignments, and deliberate exceptions.
+Product species registries record the durable identities assigned within their product. For
+example, the [Aster Species Registry](products/aster/species-registry.md) owns the botanical
+assignment of Amellus; Aster owns the collection's membership, visual rules and product behaviour.
 
 ### Deliberate botanical exceptions
 
-A Garden product should normally use a botanical genus, but another botanical term may be
-accepted when its meaning has a stronger architectural relationship with the product. Every
-exception must be explicit in the Botanical Registry and does not weaken the default convention.
-
-**Flora** is the current deliberate exception. *Flora* is a collective botanical term rather than
-a genus, and its meaning fits shared CLI infrastructure that can host and compose tooling across
-Garden.
+The [Garden Genus Registry](registry/genera.md#flora) records Flora's accepted exception and its
+architectural rationale.

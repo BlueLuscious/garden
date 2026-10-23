@@ -6,8 +6,8 @@ Flora is Garden's prospective headless multi-ecosystem CLI platform. It should p
 command hosting and explicit capabilities while Lilium, Protea, Aster, and future projects retain
 their own domain commands through plugins or adapters.
 
-Flora's identity and ecosystem role are accepted. Its repository, package layout, plugin ABI,
-runtime contracts, and implementation remain uncommitted until real consumers provide evidence.
+Flora's identity and ecosystem role are accepted. Its repository boundary, package layout, plugin
+ABI, runtime contracts and implementation remain proposed until real consumers provide evidence.
 
 The [Garden Genus Registry](../../registry/genera.md) records Flora's deliberate non-genus
 exception. The [Flora Species Registry](species-registry.md) explains why species assignments are
@@ -18,12 +18,10 @@ not applicable.
 Flora exists to prevent every Garden project from rebuilding generic CLI infrastructure while
 preserving independent product executables and ownership.
 
-The same domain command implementation should eventually support both forms:
-
-```text
-aster export icon aster/camera
-flora aster export icon aster/camera
-```
+Independent product executables and a future Flora composition should be able to invoke the same
+project-owned command capability. Aster's
+[CLI guide](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages/cli) owns its actual
+commands and invocation syntax. No composed Flora invocation is established here.
 
 The executable identity belongs to each composition. Flora owns generic hosting; the project
 plugin owns domain semantics.
@@ -57,6 +55,10 @@ Only contracts and deterministic orchestration belong in the host-neutral founda
 terminal, filesystem, process, clock, network, and interactive behaviour require explicit hosts or
 capabilities.
 
+Applicable CLI result modes follow Garden's [shared presentation rules](../../project-rules.md#cli-presentation).
+Flora may eventually provide reusable hosting code that implements those conventions; it does not
+own their ecosystem policy. Product commands and concrete result contracts remain product-owned.
+
 ## Plugin model
 
 A Flora plugin contributes a stable project namespace, command metadata, structured command
@@ -81,7 +83,7 @@ Project-specific integrations should remain with their products:
 ```text
 Lilium repository ----> Lilium Flora plugin
 Protea repository -----> Protea Flora plugin
-Aster repository -----> @aster/flora adapter
+Aster repository -----> Aster Flora adapter
 Flora repository -----> generic contracts, hosts, and optional capabilities
 ```
 
@@ -90,14 +92,22 @@ plugin contract and its own project's public command boundary.
 
 ## Aster integration
 
-Aster provides the first concrete architecture for host-neutral command reuse, but its current
-`@aster/cli` remains a complete standalone product. A future split is conditional:
+Aster already provides host-neutral command composition within `@luscious-garden/aster-cli`,
+alongside its standalone `aster` executable. Its
+[product-owned CLI authority](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages/cli)
+describes its implemented boundaries. A future split is conditional:
 
 ```text
-@aster/commands ----> Aster structured commands and immutable plans
-@aster/cli ---------> @aster/commands + default catalogue + standalone Node host
-@aster/flora -------> @aster/commands + @flora/core adapter
+Aster structured commands ----> Aster domain operations and plans
+Standalone Aster CLI ---------> structured commands + catalogue + Node host
+Aster Flora adapter ----------> structured commands + Flora public contracts
 ```
+
+The proposed separation does not establish additional packages. Aster's
+[extraction proposal](https://github.com/BlueLuscious/aster/blob/develop/docs/en/future-capabilities.md#command-set-extraction-and-flora-integration)
+owns its conditional package direction. Eventual public package names use the
+[Garden publication scope](../../project-rules.md#dependencies-and-distribution); suffixes and
+boundaries remain provisional.
 
 Flora would route the `aster` namespace and provide host capabilities. It would not import Aster
 implementation paths or duplicate Aster command behaviour.
@@ -131,7 +141,8 @@ Flora is not:
 - the minimal plugin and command contracts;
 - namespace and command-conflict rules;
 - host capability ownership and lifecycle;
-- non-interactive, CI, and structured output guarantees;
+- product-specific non-interactive, CI and structured-output contracts within the shared
+  presentation rules;
 - plugin compatibility and version negotiation;
 - package loading, installation, discovery, and trust policy;
 - the evidence threshold for independent extraction.
