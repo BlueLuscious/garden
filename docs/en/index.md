@@ -1,11 +1,15 @@
 # Garden Architecture Book
 
-Status: **Proposed ecosystem authority**
+Status: **Canonical ecosystem authority; individual decisions retain their stated status**
 
 Garden is an ecosystem of independent software projects that share an interoperability philosophy
 without requiring one another. This Architecture Book records project identity, ecosystem
 relationships, and cross-project dependency direction. It is not an API reference and does not
 replace the canonical documentation owned by each project.
+
+The [shared project rules](project-rules.md) own accepted engineering and contribution policy,
+including language-specific profiles, shared CLI presentation and the procedure for product exceptions.
+Policy acceptance is distinct from product adoption and automated enforcement.
 
 ## Projects
 
@@ -13,7 +17,7 @@ replace the canonical documentation owned by each project.
 | --- | --- | --- |
 | [Lilium](products/lilium/index.md) | Frontend framework | Active project with evolving architecture. |
 | [Protea](products/protea/index.md) | UI component library | Active product direction with evolving architecture. |
-| [Aster](products/aster/index.md) | Portable icon platform | Active project with implemented Core, Icons, SVG, Import, and CLI packages. |
+| [Aster](products/aster/index.md) | Portable icon platform | Active project with published Core, Icons, SVG and CLI packages, plus private Import. |
 | [Flora](products/flora/index.md) | Headless multi-ecosystem CLI platform | Accepted product direction; implementation and plugin ABI remain future work. |
 
 The [Garden ecosystem](ecosystem.md) defines the principles shared by these projects.
@@ -28,11 +32,15 @@ This book may state:
 - which project owns an adapter or plugin;
 - which cross-project decisions are accepted, provisional, or deferred.
 
+Shared engineering and contribution requirements belong to the [project rules](project-rules.md).
+Product repositories reference that authority and retain their compatible additions and approved
+exceptions at the owning product; reciprocal links preserve each subject's owner.
+
 This book must not duplicate package contracts, installation instructions, runtime workflows,
 diagnostic tables, release procedures, or source-level implementation details. Those belong to
-the relevant project and package documentation. Within this repository, the
-[Aster package documentation](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages) remains authoritative for implemented Aster
-behaviour.
+the relevant project and package documentation. Aster's
+[package documentation](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages)
+remains authoritative for implemented Aster behaviour.
 
 ## Status language
 

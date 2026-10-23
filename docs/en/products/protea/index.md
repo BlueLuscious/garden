@@ -27,25 +27,21 @@ Protea may own:
 - optional design tokens, styles, and default templates kept distinct from behavioural identity;
 - framework-specific adapters and wrappers.
 
-Its component model should preserve a clear conceptual progression:
+Its component model should preserve a conceptual progression:
 
 ```text
-BaseComponent
-`-- component type / family
+Shared component foundation
+`-- component family
     `-- behavioural or structural variant
         `-- optional presentation style
 ```
 
-For example:
+A sidebar family may, for example, have static and floating variants. This progression does not
+establish implementation classes or require an inheritance hierarchy. Choose composition or
+inheritance according to real responsibilities and the
+[shared architecture rules](../../project-rules.md#responsibilities-layers-and-dependencies).
 
-```text
-BaseComponent
-`-- SidebarComponent
-    |-- StaticSidebarComponent
-    `-- FloatingSidebarComponent
-```
-
-A presentation such as `Default`, `Minimal`, or `Glass` should not require a new behavioural class
+A presentation such as `Default`, `Minimal`, or `Glass` does not require a new behavioural class
 merely because its visual treatment differs. Types and variants describe component identity or
 behaviour; styles describe presentation unless a concrete design requirement proves otherwise.
 
@@ -71,7 +67,8 @@ Protea remains a standalone product. A Lilium-specific adapter may make Protea c
 native through public Lilium contracts:
 
 ```text
-Protea core model ----> Protea Lilium adapter ----> Lilium public contracts
+Future Protea Lilium adapter ----> Protea public contracts
+                            `---> Lilium public contracts
 ```
 
 Lilium must not import Protea, and Protea core must not depend on Lilium implementation details.
