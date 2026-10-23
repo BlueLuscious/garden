@@ -336,7 +336,7 @@ hosts apply them in their applicable human and JSON result modes. Each product o
 command grammar, labels, schemas, diagnostic codes, stream selection and exit statuses.
 
 Follow the [project directory](index.md#projects) for relevant product records. For example,
-[Aster's current-source Shell documentation](https://github.com/BlueLuscious/aster/blob/develop/docs/en/packages/cli/shell/index.md#presentation)
+[Aster's current-source Shell documentation](https://github.com/BlueLuscious/aster/blob/master/docs/en/packages/cli/shell/index.md#presentation)
 owns that product's concrete presentation, stream and status contracts. Use its release authorities
 for published-package behaviour; that product link does not define the shared policy here.
 
@@ -423,6 +423,24 @@ Where contributor tooling exists, its documentation follows the actual tooling f
 their responsibilities, composition, commands and checks. Architecture/governance explains shared
 policy and links the tooling owner for implementation details. Product-specific domain documentation
 need not invent a matching source root when its authority exists independently of code layout.
+
+### Cross-project links
+
+Use relative links within a repository so that navigation follows the checked-out source.
+Canonical links between Garden projects always target the owning repository's `master` branch.
+Author the final path and fragment from the outset, including when the corresponding work is
+still local, on a feature branch or in `develop`, and the destination does not yet exist in `master`.
+
+Do not use temporary branch or commit links for canonical navigation and schedule another change
+or merge merely to retarget them after integration. A temporarily unresolved cross-project target
+or fragment is an accepted integration dependency; it does not by itself block the documentary
+change or require a different URL. Check the intended destination against the owning source when
+available and report its current availability separately, without claiming a pending target exists.
+
+Exact commits and verified version references still identify historical records, publications,
+approvals and reproducible evidence. They do not replace the current canonical navigation owner.
+A `master` link alone proves neither integration of pending work, implementation, policy
+conformance nor package publication. Preserve each claim's actual source and release boundary.
 
 ### Readiness and historical evidence
 

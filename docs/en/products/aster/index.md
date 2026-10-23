@@ -6,9 +6,9 @@ Aster is Garden's portable icon platform. It owns portable icon and collection d
 curated artwork, standalone SVG rendering and explicit catalogue workflows. Optional source
 adoption remains a private capability.
 
-The [Aster package documentation](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages)
+The [Aster package documentation](https://github.com/BlueLuscious/aster/tree/master/docs/en/packages)
 owns implemented APIs, package boundaries and workflows. Its
-[source and published-version guidance](https://github.com/BlueLuscious/aster/blob/develop/docs/en/index.md#source-and-published-versions)
+[source and published-version guidance](https://github.com/BlueLuscious/aster/blob/master/docs/en/index.md#source-and-published-versions)
 distinguishes current guides from released behaviour; later source changes must not be attributed
 automatically to a registry installation.
 
@@ -27,11 +27,11 @@ Aster owns:
 
 | Package | Ecosystem responsibility | Distribution |
 | --- | --- | --- |
-| [`@luscious-garden/aster-core`](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages/core) | Portable definitions and construction. | Public; published. |
-| [`@luscious-garden/aster-icons`](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages/icons) | Canonical artwork and discovery. | Public; published. |
-| [`@luscious-garden/aster-svg`](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages/svg) | Standalone SVG rendering. | Public; published. |
-| [`@luscious-garden/aster-cli`](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages/cli) | Command composition and standalone hosting. | Public; published. |
-| [`@luscious-garden/aster-import`](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages/import) | Adoption of acquired external sources. | Private workspace package. |
+| [`@luscious-garden/aster-core`](https://github.com/BlueLuscious/aster/tree/master/docs/en/packages/core) | Portable definitions and construction. | Public; published. |
+| [`@luscious-garden/aster-icons`](https://github.com/BlueLuscious/aster/tree/master/docs/en/packages/icons) | Canonical artwork and discovery. | Public; published. |
+| [`@luscious-garden/aster-svg`](https://github.com/BlueLuscious/aster/tree/master/docs/en/packages/svg) | Standalone SVG rendering. | Public; published. |
+| [`@luscious-garden/aster-cli`](https://github.com/BlueLuscious/aster/tree/master/docs/en/packages/cli) | Command composition and standalone hosting. | Public; published. |
+| [`@luscious-garden/aster-import`](https://github.com/BlueLuscious/aster/tree/master/docs/en/packages/import) | Adoption of acquired external sources. | Private workspace package. |
 
 Aster's [12 October 2026 publication record](https://github.com/BlueLuscious/aster/blob/08dca1d50cf48bfe68795e300fc054c4a8c86b66/docs/en/project/publications/2026-10-12.md)
 records the stable public-package combination verified on that date. Package histories and
@@ -41,7 +41,7 @@ guides may describe later changes. Private Import is not part of that published 
 ## Current visual baseline
 
 Amellus is Aster's active foundational collection. Its
-[collection authority](https://github.com/BlueLuscious/aster/tree/develop/docs/en/collections/amellus)
+[collection authority](https://github.com/BlueLuscious/aster/tree/master/docs/en/collections/amellus)
 owns curatorial identity, provenance, visual rules and acceptance, and links the product-owned
 membership and distribution authorities. Collection lifecycle is separate from package publication.
 
@@ -70,14 +70,14 @@ how to accept icons; Aster remains usable independently and owns no Protea-speci
 Aster separates host-neutral command composition from its private standalone Node shell within
 `@luscious-garden/aster-cli`. Its `aster` executable remains independently usable.
 
-[Command-set extraction and Flora integration](https://github.com/BlueLuscious/aster/blob/develop/docs/en/future-capabilities.md#command-set-extraction-and-flora-integration)
+[Command-set extraction and Flora integration](https://github.com/BlueLuscious/aster/blob/master/docs/en/future-capabilities.md#command-set-extraction-and-flora-integration)
 remain a product-owned conditional proposal. Command-set extraction requires a real independent
 consumer. A Flora adapter additionally requires a stable public plugin boundary and a demonstrated
 integration. Neither the separate command package nor the Flora adapter is implemented.
 
 A standalone host or future Flora host would present or publish Aster plans through explicit
 capabilities. Process and filesystem authority remain outside the command domain. Aster's
-[Shell guide](https://github.com/BlueLuscious/aster/blob/develop/docs/en/packages/cli/shell/index.md)
+[Shell guide](https://github.com/BlueLuscious/aster/blob/master/docs/en/packages/cli/shell/index.md)
 owns current invocation syntax; Garden does not establish a composed Flora command contract.
 
 ## Versioning

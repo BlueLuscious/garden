@@ -20,7 +20,7 @@ preserving independent product executables and ownership.
 
 Independent product executables and a future Flora composition should be able to invoke the same
 project-owned command capability. Aster's
-[CLI guide](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages/cli) owns its actual
+[CLI guide](https://github.com/BlueLuscious/aster/tree/master/docs/en/packages/cli) owns its actual
 commands and invocation syntax. No composed Flora invocation is established here.
 
 The executable identity belongs to each composition. Flora owns generic hosting; the project
@@ -94,7 +94,7 @@ plugin contract and its own project's public command boundary.
 
 Aster already provides host-neutral command composition within `@luscious-garden/aster-cli`,
 alongside its standalone `aster` executable. Its
-[product-owned CLI authority](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages/cli)
+[product-owned CLI authority](https://github.com/BlueLuscious/aster/tree/master/docs/en/packages/cli)
 describes its implemented boundaries. A future split is conditional:
 
 ```text
@@ -104,7 +104,7 @@ Aster Flora adapter ----------> structured commands + Flora public contracts
 ```
 
 The proposed separation does not establish additional packages. Aster's
-[extraction proposal](https://github.com/BlueLuscious/aster/blob/develop/docs/en/future-capabilities.md#command-set-extraction-and-flora-integration)
+[extraction proposal](https://github.com/BlueLuscious/aster/blob/master/docs/en/future-capabilities.md#command-set-extraction-and-flora-integration)
 owns its conditional package direction. Eventual public package names use the
 [Garden publication scope](../../project-rules.md#dependencies-and-distribution); suffixes and
 boundaries remain provisional.
