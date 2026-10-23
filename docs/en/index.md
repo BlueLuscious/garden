@@ -39,7 +39,7 @@ exceptions at the owning product; reciprocal links preserve each subject's owner
 This book must not duplicate package contracts, installation instructions, runtime workflows,
 diagnostic tables, release procedures, or source-level implementation details. Those belong to
 the relevant project and package documentation. Aster's
-[package documentation](https://github.com/BlueLuscious/aster/tree/develop/docs/en/packages)
+[package documentation](https://github.com/BlueLuscious/aster/tree/master/docs/en/packages)
 remains authoritative for implemented Aster behaviour.
 
 ## Status language

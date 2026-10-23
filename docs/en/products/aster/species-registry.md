@@ -26,7 +26,7 @@ Aster product concerns.
 - **Taxonomic Notes:** `Amellus` is also an accepted genus name. This assignment always denotes
   the complete species *Aster amellus* and reserves the short product-context identity within
   Garden while it remains Used.
-- **Product Documentation:** [Amellus Collection](https://github.com/BlueLuscious/aster/tree/develop/docs/en/collections/amellus)
+- **Product Documentation:** [Amellus Collection](https://github.com/BlueLuscious/aster/tree/master/docs/en/collections/amellus)
 
 ## Assignment Policy
 
