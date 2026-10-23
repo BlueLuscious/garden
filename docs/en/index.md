@@ -22,6 +22,12 @@ Policy acceptance is distinct from product adoption and automated enforcement.
 
 The [Garden ecosystem](ecosystem.md) defines the principles shared by these projects.
 
+## Repository automation
+
+[Repository automation](automation.md) documents Garden's Discord notification workflow, event
+coverage and secret configuration. Notifications do not replace documentary verification or
+product-owned CI.
+
 ## Authority boundary
 
 This book may state:
