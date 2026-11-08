@@ -242,8 +242,16 @@ retain their own descriptive JSDoc, including private members.
 - Use `@remarks` for important non-obvious details, such as internal processes, failure behaviour,
   invariants, ownership, lifecycle or design context.
 
-Describe stable behaviour, responsibilities and relationships. Link stable symbols or canonical
-documentation where useful; exclude contributor-local delivery chronology and records.
+Describe the symbol's purpose, stable behaviour, responsibilities and relationships. Explain
+what it represents and what it does; explain how only when that context is needed for correct
+use or maintenance. Keep JSDoc concise but sufficient for the symbol's responsibility, without
+fixed line or word quotas.
+
+Retain the preconditions, effects, failure behaviour, ownership and lifetime needed to use the
+symbol correctly. Keep extended protocols, rationale and examples in canonical documentation.
+Link stable symbols or the relevant canonical section where useful instead of repeating them;
+links supplement rather than replace the essential contract. Exclude contributor-local delivery
+chronology and records.
 
 ### JSDoc exceptions and ordinary comments
 
